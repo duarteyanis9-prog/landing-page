@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon CV | Yanis Duarte</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero { padding: 160px 60px 60px; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-end; }
+    .page-hero h1 { font-size: clamp(36px, 5vw, 64px); font-weight: 700; margin-bottom: 12px; }
+    .page-hero p { font-size: 16px; color: rgba(232,232,232,0.55); }
+    .cv-section { padding: 0 60px 100px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 300px 1fr; gap: 60px; }
+    .cv-sidebar { position: sticky; top: 100px; align-self: start; }
+    .cv-avatar { width: 100px; height: 100px; background: linear-gradient(135deg, #1a1a1e, #2a2a2e); border: 2px solid var(--green-border); display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 32px; font-weight: 700; color: var(--green); margin-bottom: 24px; }
+    .cv-name { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+    .cv-role { font-family: var(--mono); font-size: 12px; color: var(--green); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
+    .cv-contact { display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; }
+    .cv-contact a, .cv-contact span { font-size: 13px; color: rgba(232,232,232,0.6); display: flex; align-items: center; gap: 8px; transition: color 0.3s; }
+    .cv-contact a:hover { color: var(--green); }
+    .cv-sidebar-section { margin-bottom: 32px; }
+    .cv-sidebar-title { font-family: var(--mono); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--green); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .cv-skills-list { display: flex; flex-direction: column; gap: 8px; }
+    .cv-skill-item { display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+    .cv-skill-dots { display: flex; gap: 4px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); }
+    .dot.filled { background: var(--green); }
+    .cv-lang { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 8px; color: rgba(232,232,232,0.7); }
+    .cv-lang span:last-child { color: var(--green); font-family: var(--mono); font-size: 11px; }
+    .cv-main-section { margin-bottom: 48px; }
+    .cv-main-title { font-size: 22px; font-weight: 700; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 12px; }
+    .cv-main-title::before { content: ''; width: 4px; height: 24px; background: var(--green); display: block; }
+    .cv-entry { margin-bottom: 28px; padding-left: 20px; border-left: 1px solid var(--border); transition: border-color 0.3s; }
+    .cv-entry:hover { border-color: var(--green-border); }
+    .cv-entry-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px; }
+    .cv-entry-title { font-size: 16px; font-weight: 600; }
+    .cv-entry-date { font-family: var(--mono); font-size: 11px; color: var(--green); background: var(--green-dim); padding: 3px 10px; border: 1px solid var(--green-border); white-space: nowrap; }
+    .cv-entry-sub { font-size: 13px; color: var(--gray); margin-bottom: 8px; }
+    .cv-entry-desc { font-size: 13px; color: rgba(232,232,232,0.6); line-height: 1.7; }
+    .cv-entry-desc ul { padding-left: 16px; margin-top: 8px; }
+    .cv-entry-desc li { margin-bottom: 4px; }
+    @media(max-width:768px) {
+      .page-hero { padding: 120px 24px 40px; flex-direction: column; gap: 20px; }
+      .cv-section { padding: 0 24px 60px; grid-template-columns: 1fr; }
+      .cv-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">YD</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html#about">Qui je suis</a></li>
+      <li><a href="index.html#skills">Compétences</a></li>
+      <li><a href="projects.html">Projets</a></li>
+      <li><a href="tableau-synthese.html">Tableau de Synthèse</a></li>
+      <li><a href="cv.html">Mon CV</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </nav>
+
+  <div class="page-hero">
+    <div>
+      <div class="section-number">Curriculum Vitae</div>
+      <h1>Mon <span class="accent">CV</span></h1>
+      <p>Étudiant BTS SIO SISR – Infrastructure & Réseaux</p>
+    </div>
+  </div>
+
+  <div class="cv-section">
+    <!-- SIDEBAR -->
+    <aside class="cv-sidebar">
+      <div class="cv-avatar">YD</div>
+      <div class="cv-name">Yanis Duarte</div>
+      <div class="cv-role">BTS SIO · SISR</div>
+      <div class="cv-contact">
+        <a href="mailto:duarteyanis9@gmail.com">📧 duarteyanis9@gmail.com</a>
+        <a href="https://github.com/duarteyanis9-prog" target="_blank">💻 github.com/duarteyanis9-prog</a>
+        <span>📍 Vitry-sur-Seine, 94400</span>
+      </div>
+
+      <div class="cv-sidebar-section">
+        <div class="cv-sidebar-title">Compétences techniques</div>
+        <div class="cv-skills-list">
+          <div class="cv-skill-item"><span>Linux / Debian</span><div class="cv-skill-dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div></div>
+          <div class="cv-skill-item"><span>Réseaux TCP/IP</span><div class="cv-skill-dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div></div>
+          <div class="cv-skill-item"><span>VMware / VirtualBox</span><div class="cv-skill-dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div></div>
+          <div class="cv-skill-item"><span>Apache / MariaDB</span><div class="cv-skill-dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div></div>
+          <div class="cv-skill-item"><span>HTML / CSS / JS</span><div class="cv-skill-dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div></div>
+          <div class="cv-skill-item"><span>Python / PHP</span><div class="cv-skill-dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></div>
+          <div class="cv-skill-item"><span>Docker</span><div class="cv-skill-dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div></div>
+        </div>
+      </div>
+
+      <div class="cv-sidebar-section">
+        <div class="cv-sidebar-title">Langues</div>
+        <div class="cv-lang"><span>Français</span><span>Natif</span></div>
+        <div class="cv-lang"><span>Anglais</span><span>Intermédiaire</span></div>
+        <div class="cv-lang"><span>Portugais</span><span>Notions</span></div>
+      </div>
+
+      <div class="cv-sidebar-section">
+        <div class="cv-sidebar-title">Centres d'intérêt</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span style="font-size:12px;border:1px solid var(--border);padding:4px 10px;color:var(--gray);">✈️ Aviation</span>
+          <span style="font-size:12px;border:1px solid var(--border);padding:4px 10px;color:var(--gray);">🏃 Running</span>
+          <span style="font-size:12px;border:1px solid var(--border);padding:4px 10px;color:var(--gray);">💪 Sport</span>
+          <span style="font-size:12px;border:1px solid var(--border);padding:4px 10px;color:var(--gray);">💻 Tech</span>
+          <span style="font-size:12px;border:1px solid var(--border);padding:4px 10px;color:var(--gray);">🎮 Gaming</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main>
+      <div class="cv-main-section">
+        <h2 class="cv-main-title">Formation</h2>
+        <div class="cv-entry">
+          <div class="cv-entry-header">
+            <div class="cv-entry-title">BTS SIO – Services Informatiques aux Organisations</div>
+            <div class="cv-entry-date">2025 – 2027</div>
+          </div>
+          <div class="cv-entry-sub">EFREI Paris – CFA Numia, Villejuif</div>
+          <div class="cv-entry-desc">Option SISR (Solutions d'Infrastructure, Systèmes et Réseaux). Grande école d'ingénieurs informatique habilitée par la CTI.</div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-entry-header">
+            <div class="cv-entry-title">Baccalauréat Professionnel Vente</div>
+            <div class="cv-entry-date">2024</div>
+          </div>
+          <div class="cv-entry-sub">Lycée Marianne</div>
+          <div class="cv-entry-desc">Obtention du Bac Pro. Chef-d'œuvre : organisation d'un événement job dating au lycée Marianne.</div>
+        </div>
+      </div>
+
+      <div class="cv-main-section">
+        <h2 class="cv-main-title">Projets & Réalisations</h2>
+        <div class="cv-entry">
+          <div class="cv-entry-header">
+            <div class="cv-entry-title">Hackathon NOVA – Plateforme Événementielle</div>
+            <div class="cv-entry-date">Jan 2026</div>
+          </div>
+          <div class="cv-entry-sub">EFREI Paris – Projet en équipe de 8 personnes</div>
+          <div class="cv-entry-desc">Rôle : Infrastructure & DevOps. Déploiement sur alwaysdata, configuration serveur. Site : nova.alwaysdata.net</div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-entry-header">
+            <div class="cv-entry-title">Déploiement GLPI & Gestion de Parc</div>
+            <div class="cv-entry-date">Oct 2025 – Mai 2026</div>
+          </div>
+          <div class="cv-entry-sub">EFREI Paris – Livrables C1 & C7</div>
+          <div class="cv-entry-desc">Installation et configuration de GLPI sur Debian, inventaire automatisé, gestion de tickets, exports.</div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-entry-header">
+            <div class="cv-entry-title">Déploiement Multi-Services (C17)</div>
+            <div class="cv-entry-date">Mai 2026</div>
+          </div>
+          <div class="cv-entry-sub">EFREI Paris – Livrable C17</div>
+          <div class="cv-entry-desc">Déploiement Apache HTML/PHP, hébergement alwaysdata, GitHub Pages, introduction Docker et cloud.</div>
+        </div>
+      </div>
+
+      <div class="cv-main-section">
+        <h2 class="cv-main-title">Objectif Professionnel</h2>
+        <div class="cv-entry">
+          <div class="cv-entry-header">
+            <div class="cv-entry-title">Projet Pilote ✈️</div>
+            <div class="cv-entry-date">En cours</div>
+          </div>
+          <div class="cv-entry-sub">Objectif long terme</div>
+          <div class="cv-entry-desc">Préparation au Brevet d'Initiation Aéronautique (BIA), objectif intégrer le programme préparatoire CNFAS, obtenir le PPL (Private Pilot Licence).</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-logo">YD</div>
+    <p class="footer-copy">Conçu et développé avec <span class="accent">♥</span> par Yanis Duarte</p>
+    <p class="footer-copy">© 2026 — Tous droits réservés</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
