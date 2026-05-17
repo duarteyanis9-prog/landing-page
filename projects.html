@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mes Projets | Yanis Duarte</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero { padding: 160px 60px 80px; max-width: 1200px; margin: 0 auto; }
+    .page-hero h1 { font-size: clamp(40px, 6vw, 72px); font-weight: 700; margin-bottom: 16px; }
+    .page-hero p { font-size: 16px; color: rgba(232,232,232,0.55); max-width: 540px; line-height: 1.8; }
+    .filters { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
+    .filter-btn { font-family: var(--mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 8px 20px; border: 1px solid var(--border); background: none; color: var(--gray); cursor: pointer; transition: all 0.3s; }
+    .filter-btn.active, .filter-btn:hover { border-color: var(--green); color: var(--green); background: var(--green-dim); }
+    .projects-section { padding: 0 60px 100px; max-width: 1200px; margin: 0 auto; }
+    .hackathon-banner {
+      background: var(--dark); border: 1px solid var(--green-border);
+      padding: 48px; margin-bottom: 48px; position: relative; overflow: hidden;
+      display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;
+    }
+    .hackathon-banner::before { content: 'HACKATHON'; position: absolute; font-family: var(--mono); font-size: 120px; font-weight: 700; color: rgba(57,255,20,0.03); right: -10px; top: 50%; transform: translateY(-50%); }
+    .hackathon-label { font-family: var(--mono); font-size: 10px; letter-spacing: 3px; color: var(--green); text-transform: uppercase; margin-bottom: 12px; }
+    .hackathon-title { font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+    .hackathon-desc { font-size: 14px; color: var(--gray); line-height: 1.7; max-width: 560px; }
+    .hackathon-meta { display: flex; gap: 24px; margin-top: 20px; }
+    .hackathon-meta span { font-family: var(--mono); font-size: 11px; color: var(--green); letter-spacing: 1px; }
+    .hackathon-btns { display: flex; flex-direction: column; gap: 12px; z-index: 1; }
+    @media(max-width:768px) {
+      .page-hero { padding: 120px 24px 60px; }
+      .projects-section { padding: 0 24px 60px; }
+      .hackathon-banner { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">YD</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html#about">Qui je suis</a></li>
+      <li><a href="index.html#skills">Compétences</a></li>
+      <li><a href="projects.html" class="active">Projets</a></li>
+      <li><a href="tableau-synthese.html">Tableau de Synthèse</a></li>
+      <li><a href="cv.html">Mon CV</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </nav>
+
+  <div class="page-hero">
+    <div class="section-number">Projets</div>
+    <h1>Mes <span class="accent">Réalisations</span></h1>
+    <p>Projets réalisés en formation, en hackathon et en autodidacte. Infrastructure, web, DevOps.</p>
+  </div>
+
+  <div class="projects-section">
+    <div class="filters">
+      <button class="filter-btn active">Tous</button>
+      <button class="filter-btn">Infrastructure</button>
+      <button class="filter-btn">Web</button>
+      <button class="filter-btn">Hackathon</button>
+    </div>
+
+    <!-- HACKATHON NOVA -->
+    <div class="hackathon-banner">
+      <div>
+        <div class="hackathon-label">🚀 Hackathon Janvier 2026</div>
+        <div class="hackathon-title">NOVA – Plateforme Événementielle</div>
+        <div class="hackathon-desc">Projet en équipe de 8 personnes. Plateforme web complète pour l'organisation d'événements (ski, bowling, escape game, laser game...). Mon rôle : Infrastructure & DevOps — déploiement sur alwaysdata, configuration serveur, gestion technique.</div>
+        <div class="hackathon-meta">
+          <span>👥 8 personnes</span>
+          <span>⚙️ Infra & DevOps</span>
+          <span>🌐 En ligne</span>
+        </div>
+      </div>
+      <div class="hackathon-btns">
+        <a href="https://nova.alwaysdata.net/" target="_blank" class="btn-primary">Voir le site</a>
+        <a href="tableau-synthese.html" class="btn-outline">Documentation</a>
+      </div>
+    </div>
+
+    <!-- GRILLE PROJETS -->
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-badge">Infrastructure · 2026</div>
+        <div class="project-title">Déploiement GLPI</div>
+        <div class="project-desc">Installation et configuration complète de GLPI sur Debian. Inventaire automatisé avec agents, gestion de tickets, exports CSV. Compétences C1 et C7 validées à 100%.</div>
+        <div class="project-tags"><span class="tag">Debian</span><span class="tag">Apache</span><span class="tag">MariaDB</span><span class="tag">PHP</span></div>
+        <div class="project-links"><a href="tableau-synthese.html" class="project-link">Documentation →</a></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-badge">Web · 2026</div>
+        <div class="project-title">Landing Page Nova Events</div>
+        <div class="project-desc">Landing page pour Nova Events publiée via GitHub Pages. Intégration Google Analytics pour le suivi d'audience. Compétence C11 validée à 100%.</div>
+        <div class="project-tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">GitHub Pages</span><span class="tag">Analytics</span></div>
+        <div class="project-links"><a href="https://duarteyanis9-prog.github.io/landing-page/" target="_blank" class="project-link">Voir le site →</a></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-badge">DevOps · 2026</div>
+        <div class="project-title">Déploiement Multi-Services</div>
+        <div class="project-desc">Déploiement de services HTML et PHP sur Apache, hébergement sur alwaysdata, publication GitHub Pages. Introduction à Docker et aux grands clouds.</div>
+        <div class="project-tags"><span class="tag">Apache</span><span class="tag">Docker</span><span class="tag">alwaysdata</span><span class="tag">Cloud</span></div>
+        <div class="project-links"><a href="tableau-synthese.html" class="project-link">Documentation →</a></div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-badge">Infrastructure · 2026</div>
+        <div class="project-title">Portfolio Personnel</div>
+        <div class="project-desc">Portfolio interactif développé avec HTML, CSS et JavaScript vanilla. Design dark avec accent vert, animations, responsive. Publié sur GitHub Pages.</div>
+        <div class="project-tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div>
+        <div class="project-links"><a href="index.html" class="project-link">Voir →</a></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">YD</div>
+    <p class="footer-copy">Conçu et développé avec <span class="accent">♥</span> par Yanis Duarte</p>
+    <p class="footer-copy">© 2026 — Tous droits réservés</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
