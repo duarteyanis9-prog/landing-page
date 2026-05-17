@@ -1,1 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de Yanis Duarte - Étudiant BTS SIO SISR à l'EFREI Paris. Infra, réseaux, DevOps." />
+  <meta name="theme-color" content="#0d0d0d" />
+  <title>Yanis Duarte | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">YD</a>
+    <ul class="nav-links">
+      <li><a href="#home">Accueil</a></li>
+      <li><a href="#about">Qui je suis</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="projects.html">Projets</a></li>
+      <li><a href="tableau-synthese.html">Tableau de Synthèse</a></li>
+      <li><a href="cv.html">Mon CV</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-bg-text">YANIS</div>
+    <div class="hero-content">
+      <p class="hero-greeting">Salut, moi c'est</p>
+      <h1 class="hero-name">Yanis <span class="accent">Duarte</span></h1>
+      <div class="hero-typed">
+        <span id="typed"></span><span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-desc">Étudiant en BTS SIO option SISR à l'EFREI Paris, passionné par les réseaux, l'infrastructure et le DevOps. Déterminé, ambitieux, et toujours en train de construire quelque chose.</p>
+      <div class="hero-btns">
+        <a href="#about" class="btn-primary">En savoir plus</a>
+        <a href="projects.html" class="btn-outline">Mes projets</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/duarteyanis9-prog" target="_blank" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        </a>
+        <a href="mailto:duarteyanis9@gmail.com" title="Email">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="section-number">01.</div>
+    <h2 class="section-title">Qui je suis</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Je suis quelqu'un de déterminé et ambitieux — le genre de personne qui fixe un objectif et fait tout pour l'atteindre. Le sport quotidien, la course à pied, la rigueur dans mon travail : tout ça fait partie de ma façon d'avancer.</p>
+        <p>Actuellement en BTS SIO SISR à l'EFREI Paris, je touche à tout : réseaux, serveurs Linux, virtualisation, déploiement... mais je ne me limite pas à l'informatique. Mon objectif à long terme ? Devenir pilote.</p>
+        <p>Ce qui me définit le mieux ? La persévérance. Quand je commence quelque chose, je le termine.</p>
+      </div>
+      <div class="about-cards">
+        <div class="about-card">
+          <span class="about-card-icon">🎯</span>
+          <h3>Infra & Réseaux</h3>
+          <p>Linux, Apache, GLPI, virtualisation VMware — l'infrastructure c'est mon terrain.</p>
+        </div>
+        <div class="about-card">
+          <span class="about-card-icon">🚀</span>
+          <h3>DevOps</h3>
+          <p>Docker, GitHub, déploiement continu. J'aime automatiser et optimiser les process.</p>
+        </div>
+        <div class="about-card">
+          <span class="about-card-icon">✈️</span>
+          <h3>Projet Pilote</h3>
+          <p>Préparation BIA, objectif CNFAS et PPL. L'aviation est ma passion de longue date.</p>
+        </div>
+        <div class="about-card">
+          <span class="about-card-icon">💪</span>
+          <h3>Sport & Discipline</h3>
+          <p>Running quotidien, sport régulier. La discipline physique nourrit la discipline mentale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-dark">
+    <div class="section-number">02.</div>
+    <h2 class="section-title">Mes Compétences</h2>
+    <div class="skills-tabs">
+      <button class="skill-tab active" data-tab="infra">Infrastructure</button>
+      <button class="skill-tab" data-tab="dev">Développement</button>
+      <button class="skill-tab" data-tab="outils">Outils</button>
+    </div>
+    <div class="skills-content" id="tab-infra">
+      <div class="skill-item"><span>Linux / Debian</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div><span class="skill-pct">80%</span></div>
+      <div class="skill-item"><span>Réseaux TCP/IP</span><div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div><span class="skill-pct">75%</span></div>
+      <div class="skill-item"><span>VMware / VirtualBox</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div><span class="skill-pct">80%</span></div>
+      <div class="skill-item"><span>Apache / Nginx</span><div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div><span class="skill-pct">75%</span></div>
+      <div class="skill-item"><span>GLPI</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div><span class="skill-pct">85%</span></div>
+      <div class="skill-item"><span>Docker</span><div class="skill-bar"><div class="skill-fill" style="--w:55%"></div></div><span class="skill-pct">55%</span></div>
+    </div>
+    <div class="skills-content hidden" id="tab-dev">
+      <div class="skill-item"><span>HTML / CSS</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div><span class="skill-pct">80%</span></div>
+      <div class="skill-item"><span>JavaScript</span><div class="skill-bar"><div class="skill-fill" style="--w:60%"></div></div><span class="skill-pct">60%</span></div>
+      <div class="skill-item"><span>PHP</span><div class="skill-bar"><div class="skill-fill" style="--w:55%"></div></div><span class="skill-pct">55%</span></div>
+      <div class="skill-item"><span>Python</span><div class="skill-bar"><div class="skill-fill" style="--w:60%"></div></div><span class="skill-pct">60%</span></div>
+      <div class="skill-item"><span>SQL / MariaDB</span><div class="skill-bar"><div class="skill-fill" style="--w:65%"></div></div><span class="skill-pct">65%</span></div>
+    </div>
+    <div class="skills-content hidden" id="tab-outils">
+      <div class="skill-item"><span>Git / GitHub</span><div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div><span class="skill-pct">75%</span></div>
+      <div class="skill-item"><span>VS Code</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div><span class="skill-pct">85%</span></div>
+      <div class="skill-item"><span>Terminal / CLI</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div><span class="skill-pct">80%</span></div>
+      <div class="skill-item"><span>Google Analytics</span><div class="skill-bar"><div class="skill-fill" style="--w:60%"></div></div><span class="skill-pct">60%</span></div>
+      <div class="skill-item"><span>FileZilla / FTP</span><div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div><span class="skill-pct">70%</span></div>
+    </div>
+  </section>
+
+  <!-- TABLEAU SYNTHESE PREVIEW -->
+  <section id="synthese" class="section">
+    <div class="section-number">03.</div>
+    <h2 class="section-title">Tableau de Synthèse BTS SIO</h2>
+    <p class="section-desc">Mon parcours en BTS SIO, trié et organisé. Toutes les compétences couvertes, les projets associés et les documentations.</p>
+    <div class="synthese-stats">
+      <div class="synth-stat"><span class="synth-num accent">5</span><span class="synth-label">Compétences validées</span></div>
+      <div class="synth-stat"><span class="synth-num accent">4</span><span class="synth-label">Livrables à 100%</span></div>
+      <div class="synth-stat"><span class="synth-num accent">1</span><span class="synth-label">Projet Hackathon</span></div>
+      <div class="synth-stat"><span class="synth-num accent">SISR</span><span class="synth-label">Option choisie</span></div>
+    </div>
+    <a href="tableau-synthese.html" class="btn-primary">Voir le tableau complet</a>
+  </section>
+
+  <!-- PARCOURS -->
+  <section id="parcours" class="section section-dark">
+    <div class="section-number">04.</div>
+    <h2 class="section-title">Mon Parcours</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2025 – Présent</div>
+        <div class="timeline-content">
+          <h3>BTS SIO SISR – EFREI Paris</h3>
+          <p>Formation en Services Informatiques aux Organisations, option SISR. Grande école d'ingénieurs informatique habilitée par la CTI — Villejuif.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2025</div>
+        <div class="timeline-content">
+          <h3>Hackathon NOVA – EFREI</h3>
+          <p>Projet en équipe de 8 personnes. Plateforme événementielle complète déployée sur alwaysdata. Rôle : Infrastructure & DevOps.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2024</div>
+        <div class="timeline-content">
+          <h3>Bac Pro Vente – Lycée Marianne</h3>
+          <p>Obtention du Baccalauréat Professionnel. Chef-d'œuvre : organisation d'un job dating au lycée. Missions TPO et prospection pour le salon de Lille.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="section-number">05.</div>
+    <h2 class="section-title">Me Contacter</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Viens, on discute !</h3>
+        <p>Que ce soit pour un projet, une alternance, une question technique ou juste échanger — hésite pas à me contacter.</p>
+        <div class="contact-items">
+          <a href="mailto:duarteyanis9@gmail.com" class="contact-item">
+            <span>📧</span> duarteyanis9@gmail.com
+          </a>
+          <a href="https://github.com/duarteyanis9-prog" target="_blank" class="contact-item">
+            <span>💻</span> github.com/duarteyanis9-prog
+          </a>
+          <div class="contact-item">
+            <span>📍</span> Vitry-sur-Seine, 94400
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="return false;">
+        <input type="text" placeholder="Ton nom" class="form-input" />
+        <input type="email" placeholder="Ton email" class="form-input" />
+        <input type="text" placeholder="Sujet" class="form-input" />
+        <textarea placeholder="Ton message..." class="form-input form-textarea"></textarea>
+        <button type="submit" class="btn-primary">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">YD</div>
+    <p class="footer-copy">Conçu et développé avec <span class="accent">♥</span> par Yanis Duarte</p>
+    <p class="footer-copy">© 2026 — Tous droits réservés</p>
+  </footer>
+
+  <script>
+    // Typed effect
+    const words = ["Étudiant BTS SIO SISR", "Infra & Réseaux", "Futur Pilote ✈️", "DevOps Enthusiast"];
+    let wi = 0, ci = 0, del = false;
+    const el = document.getElementById('typed');
+    function type() {
+      const w = words[wi];
+      if (!del) { el.textContent = w.slice(0, ++ci); if (ci === w.length) { del = true; setTimeout(type, 1500); return; } }
+      else { el.textContent = w.slice(0, --ci); if (ci === 0) { del = false; wi = (wi + 1) % words.length; } }
+      setTimeout(type, del ? 60 : 100);
+    }
+    type();
+
+    // Navbar scroll
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Skills tabs
+    document.querySelectorAll('.skill-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.skill-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.skills-content').forEach(c => c.classList.add('hidden'));
+        tab.classList.add('active');
+        document.getElementById('tab-' + tab.dataset.tab).classList.remove('hidden');
+      });
+    });
+
+    // Animate skill bars on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.querySelectorAll('.skill-fill').forEach(f => f.style.width = f.style.getPropertyValue('--w'));
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.skills-content').forEach(s => observer.observe(s));
+
+    // Mobile nav
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
