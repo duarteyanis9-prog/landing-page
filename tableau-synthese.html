@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tableau de Synthèse | Yanis Duarte</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero { padding: 160px 60px 60px; max-width: 1200px; margin: 0 auto; }
+    .page-hero h1 { font-size: clamp(36px, 5vw, 64px); font-weight: 700; margin-bottom: 16px; }
+    .page-hero p { font-size: 16px; color: rgba(232,232,232,0.55); max-width: 600px; line-height: 1.8; }
+    .synthese-section { padding: 0 60px 100px; max-width: 1200px; margin: 0 auto; }
+    .comp-block { margin-bottom: 60px; }
+    .comp-header { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; background: var(--dark); border-left: 3px solid var(--green); margin-bottom: 20px; }
+    .comp-header h2 { font-size: 18px; font-weight: 700; }
+    .comp-header .badge { font-family: var(--mono); font-size: 10px; letter-spacing: 2px; color: var(--green); background: var(--green-dim); padding: 4px 12px; border: 1px solid var(--green-border); }
+    .comp-table { width: 100%; border-collapse: collapse; }
+    .comp-table th { font-family: var(--mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gray); padding: 12px 16px; border-bottom: 1px solid var(--border); text-align: left; }
+    .comp-table td { padding: 16px; border-bottom: 1px solid var(--border); font-size: 13px; vertical-align: top; line-height: 1.6; }
+    .comp-table tr:hover td { background: rgba(57,255,20,0.03); }
+    .comp-code { font-family: var(--mono); color: var(--green); font-size: 12px; font-weight: 700; }
+    .comp-name { font-weight: 600; color: var(--white); }
+    .comp-project { color: rgba(232,232,232,0.7); }
+    .comp-period { font-family: var(--mono); font-size: 11px; color: var(--gray); white-space: nowrap; }
+    .status-ok { display: inline-flex; align-items: center; gap: 4px; font-family: var(--mono); font-size: 10px; letter-spacing: 1px; color: var(--green); background: var(--green-dim); padding: 3px 10px; border: 1px solid var(--green-border); }
+    .doc-links { display: flex; flex-direction: column; gap: 6px; }
+    .doc-link { font-size: 11px; color: var(--green); border-bottom: 1px solid var(--green-border); display: inline-block; padding-bottom: 1px; cursor: pointer; }
+    .synthese-intro { background: var(--dark); border: 1px solid var(--border); border-top: 3px solid var(--green); padding: 40px; margin-bottom: 60px; display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+    .intro-stat { text-align: center; }
+    .intro-num { font-family: var(--mono); font-size: 40px; font-weight: 700; color: var(--green); display: block; }
+    .intro-label { font-size: 12px; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+    @media(max-width:768px) {
+      .page-hero { padding: 120px 24px 40px; }
+      .synthese-section { padding: 0 24px 60px; }
+      .synthese-intro { grid-template-columns: 1fr 1fr; }
+      .comp-table { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">YD</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html#about">Qui je suis</a></li>
+      <li><a href="index.html#skills">Compétences</a></li>
+      <li><a href="projects.html">Projets</a></li>
+      <li><a href="tableau-synthese.html">Tableau de Synthèse</a></li>
+      <li><a href="cv.html">Mon CV</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </nav>
+
+  <div class="page-hero">
+    <div class="section-number">BTS SIO – SISR</div>
+    <h1>Tableau de <span class="accent">Synthèse</span></h1>
+    <p>Récapitulatif de toutes les compétences mises en œuvre durant ma formation BTS SIO option SISR à l'EFREI Paris.</p>
+  </div>
+
+  <div class="synthese-section">
+    <div class="synthese-intro">
+      <div class="intro-stat"><span class="intro-num">4</span><span class="intro-label">Livrables 100%</span></div>
+      <div class="intro-stat"><span class="intro-num">5</span><span class="intro-label">Compétences</span></div>
+      <div class="intro-stat"><span class="intro-num">1</span><span class="intro-label">Hackathon</span></div>
+      <div class="intro-stat"><span class="intro-num">SISR</span><span class="intro-label">Option</span></div>
+    </div>
+
+    <!-- BLOC 1 -->
+    <div class="comp-block">
+      <div class="comp-header">
+        <h2>1. Gérer le patrimoine informatique</h2>
+        <span class="badge">✅ VALIDÉ</span>
+      </div>
+      <table class="comp-table">
+        <thead>
+          <tr><th>Code</th><th>Compétence</th><th>Réalisation</th><th>Période</th><th>Statut</th><th>Documentation</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="comp-code">C1</span></td><td><span class="comp-name">Recenser et identifier les ressources numériques</span></td><td class="comp-project">Installation GLPI sur Debian, déploiement d'agents d'inventaire sur 2 VMs, exports CSV ordinateurs et logiciels (27/01/2026)</td><td class="comp-period">Oct 2025 – Jan 2026</td><td><span class="status-ok">✓ 100%</span></td><td><div class="doc-links"><span class="doc-link">Documentation technique</span></div></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- BLOC 2 -->
+    <div class="comp-block">
+      <div class="comp-header">
+        <h2>2. Répondre aux incidents et aux demandes</h2>
+        <span class="badge">✅ VALIDÉ</span>
+      </div>
+      <table class="comp-table">
+        <thead><tr><th>Code</th><th>Compétence</th><th>Réalisation</th><th>Période</th><th>Statut</th><th>Documentation</th></tr></thead>
+        <tbody><tr><td><span class="comp-code">C7</span></td><td><span class="comp-name">Collecter, suivre et orienter des demandes</span></td><td class="comp-project">Configuration GLPI : profils, entités, tickets avec catégories ITIL, règles d'affectation. Exports utilisateurs, entités, tickets (15/05/2026)</td><td class="comp-period">Sept 2025 – Mai 2026</td><td><span class="status-ok">✓ 100%</span></td><td><div class="doc-links"><span class="doc-link">Documentation technique</span></div></td></tr></tbody>
+      </table>
+    </div>
+
+    <!-- BLOC 3 -->
+    <div class="comp-block">
+      <div class="comp-header">
+        <h2>3. Développer la présence en ligne</h2>
+        <span class="badge">✅ VALIDÉ</span>
+      </div>
+      <table class="comp-table">
+        <thead><tr><th>Code</th><th>Compétence</th><th>Réalisation</th><th>Période</th><th>Statut</th><th>Documentation</th></tr></thead>
+        <tbody><tr><td><span class="comp-code">C11</span></td><td><span class="comp-name">Référencer les services en ligne et mesurer leur visibilité</span></td><td class="comp-project">Création landing page Nova Events sur GitHub Pages, intégration Google Analytics, génération de vues, export rapport trafic CSV.</td><td class="comp-period">Fév 2026 – Mai 2026</td><td><span class="status-ok">✓ 100%</span></td><td><div class="doc-links"><a href="https://duarteyanis9-prog.github.io/landing-page/" target="_blank" class="doc-link">Site en ligne →</a></div></td></tr></tbody>
+      </table>
+    </div>
+
+    <!-- BLOC 4 -->
+    <div class="comp-block">
+      <div class="comp-header">
+        <h2>4. Mettre à disposition un service informatique</h2>
+        <span class="badge">✅ VALIDÉ</span>
+      </div>
+      <table class="comp-table">
+        <thead><tr><th>Code</th><th>Compétence</th><th>Réalisation</th><th>Période</th><th>Statut</th><th>Documentation</th></tr></thead>
+        <tbody><tr><td><span class="comp-code">C17</span></td><td><span class="comp-name">Déployer un service</span></td><td class="comp-project">Déploiement Apache (HTML + PHP) sur Debian, hébergement sur alwaysdata, publication GitHub Pages, introduction Docker et grands clouds (16/05/2026)</td><td class="comp-period">Oct 2025 – Mai 2026</td><td><span class="status-ok">✓ 100%</span></td><td><div class="doc-links"><span class="doc-link">Documentation technique</span></div></td></tr></tbody>
+      </table>
+    </div>
+
+    <!-- HACKATHON -->
+    <div class="comp-block">
+      <div class="comp-header">
+        <h2>Projet Hackathon – NOVA</h2>
+        <span class="badge">🚀 EFREI 2026</span>
+      </div>
+      <table class="comp-table">
+        <thead><tr><th>Projet</th><th>Description</th><th>Rôle</th><th>Compétences</th><th>Lien</th></tr></thead>
+        <tbody><tr><td><span class="comp-name">NOVA – Plateforme Événementielle</span></td><td class="comp-project">Plateforme web complète développée en équipe de 8 personnes lors du Hackathon EFREI Janvier 2026.</td><td class="comp-project"><strong style="color:var(--green)">Infrastructure & DevOps</strong> — déploiement sur alwaysdata, configuration serveur.</td><td class="comp-project">C1, C7, C11, C17</td><td><a href="https://nova.alwaysdata.net/" target="_blank" class="doc-link">nova.alwaysdata.net →</a></td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">YD</div>
+    <p class="footer-copy">Conçu et développé avec <span class="accent">♥</span> par Yanis Duarte</p>
+    <p class="footer-copy">© 2026 — Tous droits réservés</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
